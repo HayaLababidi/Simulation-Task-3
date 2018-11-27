@@ -138,10 +138,10 @@ namespace BearingMachineModels
                     generate_cumulative_range(DelayTimeDistribution);
                     continue;
                 }
-                else
+                else if (str == "BearingLifeDistribution")
                 {
                     str = SR.ReadLine();
-                    while (str != "")
+                    while (str != "" && str != null)
                     {
                         TimeDistribution TD = new TimeDistribution();
                         string[] substrings = str.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
