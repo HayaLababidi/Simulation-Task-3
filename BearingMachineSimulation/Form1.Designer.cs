@@ -262,6 +262,7 @@
             this.lbl_single.Size = new System.Drawing.Size(41, 13);
             this.lbl_single.TabIndex = 15;
             this.lbl_single.Text = "label11";
+            this.lbl_single.Visible = false;
             // 
             // lbl_AllB
             // 
@@ -271,6 +272,7 @@
             this.lbl_AllB.Size = new System.Drawing.Size(41, 13);
             this.lbl_AllB.TabIndex = 16;
             this.lbl_AllB.Text = "label12";
+            this.lbl_AllB.Visible = false;
             // 
             // label13
             // 
