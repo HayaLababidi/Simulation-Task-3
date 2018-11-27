@@ -39,11 +39,12 @@ namespace BearingMachineModels
         public List<ProposedSimulationCase> ProposedSimulationTable { get; set; }
         public PerformanceMeasures ProposedPerformanceMeasures { get; set; }
 
-        public void start_simulation(string filepath)
+        public void start_simulation()
         {
-            ReadInput(filepath);
+            Current_SimulationCase = new CurrentSimulationCase();
             CurrentSimulationTable = Current_SimulationCase.calc_bearing(NumberOfBearings, NumberOfHours, DelayTimeDistribution, BearingLifeDistribution);
-            
+            CurrentPerformanceMeasures = new PerformanceMeasures();
+            CurrentPerformanceMeasures.Current_PerformanceMeasures(CurrentSimulationTable, DowntimeCost, RepairPersonCost, BearingCost, RepairTimeForOneBearing);
         }
 
         void generate_cumulative_range(List<TimeDistribution> dist)

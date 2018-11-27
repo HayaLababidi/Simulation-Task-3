@@ -115,3 +115,15 @@ D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMac
 D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
 D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
 D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe.config
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.exe
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.pdb
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.pdb
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.dll
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.pdb
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineTesting.pdb
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csprojResolveAssemblyReference.cache
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
