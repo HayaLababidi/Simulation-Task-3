@@ -31,12 +31,20 @@ namespace BearingMachineModels
         public int RepairTimeForAllBearings { get; set; }
         public List<TimeDistribution> DelayTimeDistribution { get; set; }
         public List<TimeDistribution> BearingLifeDistribution { get; set; }
+        public CurrentSimulationCase Current_SimulationCase { get; set; }
 
         ///////////// OUTPUTS /////////////
         public List<CurrentSimulationCase> CurrentSimulationTable { get; set; }
         public PerformanceMeasures CurrentPerformanceMeasures { get; set; }
         public List<ProposedSimulationCase> ProposedSimulationTable { get; set; }
         public PerformanceMeasures ProposedPerformanceMeasures { get; set; }
+
+        public void start_simulation(string filepath)
+        {
+            ReadInput(filepath);
+            CurrentSimulationTable = Current_SimulationCase.calc_bearing(NumberOfBearings, NumberOfHours, DelayTimeDistribution, BearingLifeDistribution);
+            
+        }
 
         void generate_cumulative_range(List<TimeDistribution> dist)
         {
