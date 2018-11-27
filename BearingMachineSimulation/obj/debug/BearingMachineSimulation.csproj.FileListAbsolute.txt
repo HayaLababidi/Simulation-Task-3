@@ -103,3 +103,15 @@ D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachi
 D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
 D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
 D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe.config
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.exe
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.pdb
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.pdb
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.dll
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.pdb
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineTesting.pdb
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csprojResolveAssemblyReference.cache
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
+D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
