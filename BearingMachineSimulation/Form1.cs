@@ -26,6 +26,16 @@ namespace BearingMachineSimulation
             file_path = @"..\..\TestCases\" + Constants.FileNames.TestCase3;
             sys.ReadInput(file_path);
 
+            lbl_NoBearings.Visible = true;
+            lbl_NoHours.Visible = true;
+            lbl_downtime.Visible = true;
+            lbl_repairperson.Visible = true;
+            lbl_bearing.Visible = true;
+            lbl_single.Visible = true;
+            lbl_AllB.Visible = true;
+
+            lbl_NoBearings.Text = sys.NumberOfBearings.ToString();
+            lbl_NoHours.Text = sys.NumberOfHours.ToString();
             lbl_downtime.Text = sys.DowntimeCost.ToString();
             lbl_repairperson.Text = sys.RepairPersonCost.ToString();
             lbl_bearing.Text = sys.BearingCost.ToString();
@@ -51,6 +61,7 @@ namespace BearingMachineSimulation
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            sys = new BearingMachineModels.SimulationSystem();
 
             if (comboBox1.SelectedIndex == 0)
                 file_path = @"..\..\TestCases\" + Constants.FileNames.TestCase1;
@@ -60,6 +71,9 @@ namespace BearingMachineSimulation
                 file_path = @"..\..\TestCases\" + Constants.FileNames.TestCase3;
 
             sys.ReadInput(file_path);
+
+            lbl_NoBearings.Text = sys.NumberOfBearings.ToString();
+            lbl_NoHours.Text = sys.NumberOfHours.ToString();
             lbl_downtime.Text = sys.DowntimeCost.ToString();
             lbl_repairperson.Text = sys.RepairPersonCost.ToString();
             lbl_bearing.Text = sys.BearingCost.ToString();
@@ -74,6 +88,24 @@ namespace BearingMachineSimulation
         private void bttn_startsim_Click(object sender, EventArgs e)
         {
             sys.start_simulation(file_path);
+        }
+
+        private void tabPage_Current_Click(object sender, EventArgs e)
+        {
+            List<BearingMachineModels.PerformanceMeasures> PerformanceMeasuresList = new List<BearingMachineModels.PerformanceMeasures>();
+            PerformanceMeasuresList.Add(sys.CurrentPerformanceMeasures);
+            GrdView_CPerformanceMeasures.DataSource = PerformanceMeasuresList;
+            GrdView_currenttable.DataSource = sys.CurrentSimulationTable;
+        }
+
+        private void tabPage_Proposed_Click(object sender, EventArgs e)
+        {
+
+            List<BearingMachineModels.PerformanceMeasures> PerformanceMeasuresList = new List<BearingMachineModels.PerformanceMeasures>();
+            PerformanceMeasuresList.Add(sys.ProposedPerformanceMeasures);
+            GrdView_PPerformancemeasures.DataSource = PerformanceMeasuresList;
+            GrdView_Prposedtable.DataSource = sys.ProposedSimulationTable;
+            //lbl_Pdelay.Text = ;
         }
     }
 }
