@@ -30,6 +30,12 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_input = new System.Windows.Forms.TabPage();
+            this.lbl_NoHours = new System.Windows.Forms.Label();
+            this.lbl_NoBearings = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bttn_startsim = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lbl_AllB = new System.Windows.Forms.Label();
@@ -50,31 +56,25 @@
             this.GrdView_delay = new System.Windows.Forms.DataGridView();
             this.GrdView_bearings = new System.Windows.Forms.DataGridView();
             this.tabPage_Current = new System.Windows.Forms.TabPage();
-            this.tabPage_Proposed = new System.Windows.Forms.TabPage();
-            this.bttn_startsim = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.GrdView_currenttable = new System.Windows.Forms.DataGridView();
-            this.GrdView_Prposedtable = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbl_Pdelay = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbl_Cdelay = new System.Windows.Forms.Label();
-            this.GrdView_PPerformancemeasures = new System.Windows.Forms.DataGridView();
             this.GrdView_CPerformanceMeasures = new System.Windows.Forms.DataGridView();
-            this.lbl_NoHours = new System.Windows.Forms.Label();
-            this.lbl_NoBearings = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_Cdelay = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.GrdView_currenttable = new System.Windows.Forms.DataGridView();
+            this.tabPage_Proposed = new System.Windows.Forms.TabPage();
+            this.GrdView_PPerformancemeasures = new System.Windows.Forms.DataGridView();
+            this.lbl_Pdelay = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.GrdView_Prposedtable = new System.Windows.Forms.DataGridView();
             this.tabControl.SuspendLayout();
             this.tabPage_input.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrdView_delay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdView_bearings)).BeginInit();
             this.tabPage_Current.SuspendLayout();
-            this.tabPage_Proposed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_currenttable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_Prposedtable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_PPerformancemeasures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdView_CPerformanceMeasures)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_currenttable)).BeginInit();
+            this.tabPage_Proposed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_PPerformancemeasures)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_Prposedtable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -123,6 +123,67 @@
             this.tabPage_input.Text = "current test case";
             this.tabPage_input.UseVisualStyleBackColor = true;
             this.tabPage_input.Click += new System.EventHandler(this.tabPageinput_Click);
+            // 
+            // lbl_NoHours
+            // 
+            this.lbl_NoHours.AutoSize = true;
+            this.lbl_NoHours.Location = new System.Drawing.Point(119, 90);
+            this.lbl_NoHours.Name = "lbl_NoHours";
+            this.lbl_NoHours.Size = new System.Drawing.Size(41, 13);
+            this.lbl_NoHours.TabIndex = 24;
+            this.lbl_NoHours.Text = "label10";
+            this.lbl_NoHours.Visible = false;
+            // 
+            // lbl_NoBearings
+            // 
+            this.lbl_NoBearings.AutoSize = true;
+            this.lbl_NoBearings.Location = new System.Drawing.Point(119, 110);
+            this.lbl_NoBearings.Name = "lbl_NoBearings";
+            this.lbl_NoBearings.Size = new System.Drawing.Size(35, 13);
+            this.lbl_NoBearings.TabIndex = 23;
+            this.lbl_NoBearings.Text = "label6";
+            this.lbl_NoBearings.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 110);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 13);
+            this.label17.TabIndex = 22;
+            this.label17.Text = "Number of Bearings:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 90);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(91, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Number of hours: ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Test case 1 ",
+            "Test case 2 ",
+            "Test case 3 "});
+            this.comboBox1.Location = new System.Drawing.Point(8, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // bttn_startsim
+            // 
+            this.bttn_startsim.Location = new System.Drawing.Point(135, 36);
+            this.bttn_startsim.Name = "bttn_startsim";
+            this.bttn_startsim.Size = new System.Drawing.Size(75, 23);
+            this.bttn_startsim.TabIndex = 19;
+            this.bttn_startsim.Text = "Start";
+            this.bttn_startsim.UseVisualStyleBackColor = true;
+            this.bttn_startsim.Click += new System.EventHandler(this.bttn_startsim_Click);
             // 
             // label14
             // 
@@ -313,6 +374,41 @@
             this.tabPage_Current.UseVisualStyleBackColor = true;
             this.tabPage_Current.Click += new System.EventHandler(this.tabPage_Current_Click);
             // 
+            // GrdView_CPerformanceMeasures
+            // 
+            this.GrdView_CPerformanceMeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdView_CPerformanceMeasures.Location = new System.Drawing.Point(324, 20);
+            this.GrdView_CPerformanceMeasures.Name = "GrdView_CPerformanceMeasures";
+            this.GrdView_CPerformanceMeasures.Size = new System.Drawing.Size(498, 150);
+            this.GrdView_CPerformanceMeasures.TabIndex = 5;
+            // 
+            // lbl_Cdelay
+            // 
+            this.lbl_Cdelay.AutoSize = true;
+            this.lbl_Cdelay.Location = new System.Drawing.Point(98, 20);
+            this.lbl_Cdelay.Name = "lbl_Cdelay";
+            this.lbl_Cdelay.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Cdelay.TabIndex = 2;
+            this.lbl_Cdelay.Text = "label15";
+            this.lbl_Cdelay.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Total delay time:";
+            // 
+            // GrdView_currenttable
+            // 
+            this.GrdView_currenttable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdView_currenttable.Location = new System.Drawing.Point(8, 184);
+            this.GrdView_currenttable.Name = "GrdView_currenttable";
+            this.GrdView_currenttable.Size = new System.Drawing.Size(812, 261);
+            this.GrdView_currenttable.TabIndex = 0;
+            // 
             // tabPage_Proposed
             // 
             this.tabPage_Proposed.Controls.Add(this.GrdView_PPerformancemeasures);
@@ -328,53 +424,13 @@
             this.tabPage_Proposed.UseVisualStyleBackColor = true;
             this.tabPage_Proposed.Click += new System.EventHandler(this.tabPage_Proposed_Click);
             // 
-            // bttn_startsim
+            // GrdView_PPerformancemeasures
             // 
-            this.bttn_startsim.Location = new System.Drawing.Point(135, 36);
-            this.bttn_startsim.Name = "bttn_startsim";
-            this.bttn_startsim.Size = new System.Drawing.Size(75, 23);
-            this.bttn_startsim.TabIndex = 19;
-            this.bttn_startsim.Text = "Start";
-            this.bttn_startsim.UseVisualStyleBackColor = true;
-            this.bttn_startsim.Click += new System.EventHandler(this.bttn_startsim_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Test case 1 ",
-            "Test case 2 ",
-            "Test case 3 "});
-            this.comboBox1.Location = new System.Drawing.Point(8, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 20;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // GrdView_currenttable
-            // 
-            this.GrdView_currenttable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_currenttable.Location = new System.Drawing.Point(8, 184);
-            this.GrdView_currenttable.Name = "GrdView_currenttable";
-            this.GrdView_currenttable.Size = new System.Drawing.Size(812, 261);
-            this.GrdView_currenttable.TabIndex = 0;
-            // 
-            // GrdView_Prposedtable
-            // 
-            this.GrdView_Prposedtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_Prposedtable.Location = new System.Drawing.Point(8, 184);
-            this.GrdView_Prposedtable.Name = "GrdView_Prposedtable";
-            this.GrdView_Prposedtable.Size = new System.Drawing.Size(809, 265);
-            this.GrdView_Prposedtable.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Total delay time:";
+            this.GrdView_PPerformancemeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdView_PPerformancemeasures.Location = new System.Drawing.Point(324, 20);
+            this.GrdView_PPerformancemeasures.Name = "GrdView_PPerformancemeasures";
+            this.GrdView_PPerformancemeasures.Size = new System.Drawing.Size(496, 150);
+            this.GrdView_PPerformancemeasures.TabIndex = 4;
             // 
             // lbl_Pdelay
             // 
@@ -385,77 +441,22 @@
             this.lbl_Pdelay.TabIndex = 3;
             this.lbl_Pdelay.Text = "label12";
             // 
-            // label12
+            // label11
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Total delay time:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Total delay time:";
             // 
-            // lbl_Cdelay
+            // GrdView_Prposedtable
             // 
-            this.lbl_Cdelay.AutoSize = true;
-            this.lbl_Cdelay.Location = new System.Drawing.Point(98, 20);
-            this.lbl_Cdelay.Name = "lbl_Cdelay";
-            this.lbl_Cdelay.Size = new System.Drawing.Size(41, 13);
-            this.lbl_Cdelay.TabIndex = 2;
-            this.lbl_Cdelay.Text = "label15";
-            // 
-            // GrdView_PPerformancemeasures
-            // 
-            this.GrdView_PPerformancemeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_PPerformancemeasures.Location = new System.Drawing.Point(324, 20);
-            this.GrdView_PPerformancemeasures.Name = "GrdView_PPerformancemeasures";
-            this.GrdView_PPerformancemeasures.Size = new System.Drawing.Size(496, 150);
-            this.GrdView_PPerformancemeasures.TabIndex = 4;
-            // 
-            // GrdView_CPerformanceMeasures
-            // 
-            this.GrdView_CPerformanceMeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_CPerformanceMeasures.Location = new System.Drawing.Point(324, 20);
-            this.GrdView_CPerformanceMeasures.Name = "GrdView_CPerformanceMeasures";
-            this.GrdView_CPerformanceMeasures.Size = new System.Drawing.Size(498, 150);
-            this.GrdView_CPerformanceMeasures.TabIndex = 5;
-            // 
-            // lbl_NoHours
-            // 
-            this.lbl_NoHours.AutoSize = true;
-            this.lbl_NoHours.Location = new System.Drawing.Point(119, 90);
-            this.lbl_NoHours.Name = "lbl_NoHours";
-            this.lbl_NoHours.Size = new System.Drawing.Size(41, 13);
-            this.lbl_NoHours.TabIndex = 24;
-            this.lbl_NoHours.Text = "label10";
-            this.lbl_NoHours.Visible = false;
-            // 
-            // lbl_NoBearings
-            // 
-            this.lbl_NoBearings.AutoSize = true;
-            this.lbl_NoBearings.Location = new System.Drawing.Point(119, 110);
-            this.lbl_NoBearings.Name = "lbl_NoBearings";
-            this.lbl_NoBearings.Size = new System.Drawing.Size(35, 13);
-            this.lbl_NoBearings.TabIndex = 23;
-            this.lbl_NoBearings.Text = "label6";
-            this.lbl_NoBearings.Visible = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 13);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "Number of Bearings:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 90);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 13);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Number of hours: ";
+            this.GrdView_Prposedtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdView_Prposedtable.Location = new System.Drawing.Point(8, 184);
+            this.GrdView_Prposedtable.Name = "GrdView_Prposedtable";
+            this.GrdView_Prposedtable.Size = new System.Drawing.Size(809, 265);
+            this.GrdView_Prposedtable.TabIndex = 1;
             // 
             // Form1
             // 
@@ -473,12 +474,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrdView_bearings)).EndInit();
             this.tabPage_Current.ResumeLayout(false);
             this.tabPage_Current.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_CPerformanceMeasures)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_currenttable)).EndInit();
             this.tabPage_Proposed.ResumeLayout(false);
             this.tabPage_Proposed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_currenttable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_Prposedtable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdView_PPerformancemeasures)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdView_CPerformanceMeasures)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdView_Prposedtable)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -122,7 +122,6 @@ E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bi
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.pdb
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.dll
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.pdb
-E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineTesting.pdb
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csprojResolveAssemblyReference.cache
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources

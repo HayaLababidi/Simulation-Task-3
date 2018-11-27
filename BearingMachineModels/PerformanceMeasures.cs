@@ -19,13 +19,15 @@ namespace BearingMachineModels
         public decimal RepairPersonCost { get; set; }
         public decimal TotalCost { get; set; }
 
+        public int total_minutes { get; set; }
+
         public void Current_PerformanceMeasures(List<CurrentSimulationCase> simulation_table, int DowntimeCost_in, int RepairPersonCost_in, int BearingCost_in, int RepairTimeForOneBearing)
         {
             //Cost of bearings = # bearings × Cost/bearing 
             BearingCost = simulation_table.Count * BearingCost_in;
 
             //Cost of delay time = total minutes × cost/minute = $1650
-            int total_minutes = 0;
+            total_minutes = 0;
             for(int i=0;i<simulation_table.Count;i++)
             {
                 total_minutes+=simulation_table[i].Delay;

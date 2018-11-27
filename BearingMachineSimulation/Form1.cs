@@ -76,6 +76,7 @@ namespace BearingMachineSimulation
             lbl_bearing.Visible = true;
             lbl_single.Visible = true;
             lbl_AllB.Visible = true;
+            lbl_Cdelay.Visible = true;
 
             GrdView_bearings.DataSource = sys.BearingLifeDistribution;
             GrdView_delay.DataSource = sys.DelayTimeDistribution;
@@ -121,6 +122,8 @@ namespace BearingMachineSimulation
             PerformanceMeasuresList2.Add(sys.ProposedPerformanceMeasures);
             GrdView_PPerformancemeasures.DataSource = PerformanceMeasuresList2;
             GrdView_Prposedtable.DataSource = sys.ProposedSimulationTable;
+
+            lbl_Cdelay.Text = sys.CurrentPerformanceMeasures.total_minutes.ToString();
 
             MessageBox.Show(TestingManager.Test(sys, test_message));
         }
