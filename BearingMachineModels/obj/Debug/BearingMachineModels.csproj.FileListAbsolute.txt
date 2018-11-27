@@ -37,3 +37,8 @@ C:\Users\Osama\Desktop\Lab 9\[Students]_Template\BearingMachineModels\bin\Debug\
 C:\Users\Osama\Desktop\Lab 9\[Students]_Template\BearingMachineModels\bin\Debug\BearingMachineModels.pdb
 C:\Users\Osama\Desktop\Lab 9\[Students]_Template\BearingMachineModels\obj\Debug\BearingMachineModels.dll
 C:\Users\Osama\Desktop\Lab 9\[Students]_Template\BearingMachineModels\obj\Debug\BearingMachineModels.pdb
+D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineModels\bin\Debug\BearingMachineModels.dll
+D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineModels\bin\Debug\BearingMachineModels.pdb
+D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache
+D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineModels\obj\Debug\BearingMachineModels.dll
+D:\CS\FCIS\Semester 7\Modeling & Simulation\Tasks\Simulation Task 3\BearingMachineModels\obj\Debug\BearingMachineModels.pdb

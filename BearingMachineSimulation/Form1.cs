@@ -17,5 +17,15 @@ namespace BearingMachineSimulation
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            /*BearingMachineModels.SimulationSystem sys = new BearingMachineModels.SimulationSystem();
+            sys.ReadInputFromTestFile(@"..\..\TestCases\"+Constants.FileNames.TestCase3);
+            sys.SimulateCurrent();
+            sys.SimulateProposed();
+            MessageBox.Show(TestingManager.Test(sys,Constants.FileNames.TestCase3));
+            */
+        }
     }
 }
