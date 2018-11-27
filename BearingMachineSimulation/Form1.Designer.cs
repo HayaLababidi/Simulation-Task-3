@@ -85,7 +85,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(788, 478);
+            this.tabControl.Size = new System.Drawing.Size(836, 478);
             this.tabControl.TabIndex = 0;
             // 
             // tabPage_input
@@ -118,7 +118,7 @@
             this.tabPage_input.Location = new System.Drawing.Point(4, 22);
             this.tabPage_input.Name = "tabPage_input";
             this.tabPage_input.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_input.Size = new System.Drawing.Size(780, 452);
+            this.tabPage_input.Size = new System.Drawing.Size(828, 452);
             this.tabPage_input.TabIndex = 0;
             this.tabPage_input.Text = "current test case";
             this.tabPage_input.UseVisualStyleBackColor = true;
@@ -285,17 +285,17 @@
             // GrdView_delay
             // 
             this.GrdView_delay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_delay.Location = new System.Drawing.Point(372, 233);
+            this.GrdView_delay.Location = new System.Drawing.Point(264, 48);
             this.GrdView_delay.Name = "GrdView_delay";
-            this.GrdView_delay.Size = new System.Drawing.Size(412, 150);
+            this.GrdView_delay.Size = new System.Drawing.Size(546, 150);
             this.GrdView_delay.TabIndex = 1;
             // 
             // GrdView_bearings
             // 
             this.GrdView_bearings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_bearings.Location = new System.Drawing.Point(372, 52);
+            this.GrdView_bearings.Location = new System.Drawing.Point(264, 204);
             this.GrdView_bearings.Name = "GrdView_bearings";
-            this.GrdView_bearings.Size = new System.Drawing.Size(405, 150);
+            this.GrdView_bearings.Size = new System.Drawing.Size(546, 241);
             this.GrdView_bearings.TabIndex = 0;
             // 
             // tabPage_Current
@@ -307,7 +307,7 @@
             this.tabPage_Current.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Current.Name = "tabPage_Current";
             this.tabPage_Current.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Current.Size = new System.Drawing.Size(780, 452);
+            this.tabPage_Current.Size = new System.Drawing.Size(828, 452);
             this.tabPage_Current.TabIndex = 1;
             this.tabPage_Current.Text = "Current policy simulation ";
             this.tabPage_Current.UseVisualStyleBackColor = true;
@@ -322,7 +322,7 @@
             this.tabPage_Proposed.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Proposed.Name = "tabPage_Proposed";
             this.tabPage_Proposed.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Proposed.Size = new System.Drawing.Size(780, 452);
+            this.tabPage_Proposed.Size = new System.Drawing.Size(828, 452);
             this.tabPage_Proposed.TabIndex = 2;
             this.tabPage_Proposed.Text = "Proposed Policy simulation";
             this.tabPage_Proposed.UseVisualStyleBackColor = true;
@@ -356,15 +356,15 @@
             this.GrdView_currenttable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdView_currenttable.Location = new System.Drawing.Point(8, 184);
             this.GrdView_currenttable.Name = "GrdView_currenttable";
-            this.GrdView_currenttable.Size = new System.Drawing.Size(764, 261);
+            this.GrdView_currenttable.Size = new System.Drawing.Size(812, 261);
             this.GrdView_currenttable.TabIndex = 0;
             // 
             // GrdView_Prposedtable
             // 
             this.GrdView_Prposedtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_Prposedtable.Location = new System.Drawing.Point(11, 168);
+            this.GrdView_Prposedtable.Location = new System.Drawing.Point(8, 184);
             this.GrdView_Prposedtable.Name = "GrdView_Prposedtable";
-            this.GrdView_Prposedtable.Size = new System.Drawing.Size(761, 277);
+            this.GrdView_Prposedtable.Size = new System.Drawing.Size(809, 265);
             this.GrdView_Prposedtable.TabIndex = 1;
             // 
             // label11
@@ -406,9 +406,9 @@
             // GrdView_PPerformancemeasures
             // 
             this.GrdView_PPerformancemeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdView_PPerformancemeasures.Location = new System.Drawing.Point(324, 6);
+            this.GrdView_PPerformancemeasures.Location = new System.Drawing.Point(324, 20);
             this.GrdView_PPerformancemeasures.Name = "GrdView_PPerformancemeasures";
-            this.GrdView_PPerformancemeasures.Size = new System.Drawing.Size(448, 150);
+            this.GrdView_PPerformancemeasures.Size = new System.Drawing.Size(496, 150);
             this.GrdView_PPerformancemeasures.TabIndex = 4;
             // 
             // GrdView_CPerformanceMeasures
@@ -416,7 +416,7 @@
             this.GrdView_CPerformanceMeasures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdView_CPerformanceMeasures.Location = new System.Drawing.Point(324, 20);
             this.GrdView_CPerformanceMeasures.Name = "GrdView_CPerformanceMeasures";
-            this.GrdView_CPerformanceMeasures.Size = new System.Drawing.Size(448, 150);
+            this.GrdView_CPerformanceMeasures.Size = new System.Drawing.Size(498, 150);
             this.GrdView_CPerformanceMeasures.TabIndex = 5;
             // 
             // lbl_NoHours
@@ -456,13 +456,12 @@
             this.label18.Size = new System.Drawing.Size(91, 13);
             this.label18.TabIndex = 21;
             this.label18.Text = "Number of hours: ";
-            this.label18.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 479);
+            this.ClientSize = new System.Drawing.Size(836, 479);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
             this.Text = "Form1";
