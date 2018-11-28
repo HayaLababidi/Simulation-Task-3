@@ -126,3 +126,14 @@ E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\ob
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe.config
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.pdb
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.dll
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\bin\Debug\BearingMachineModels.pdb
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csprojResolveAssemblyReference.cache
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Form1.resources
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.exe
+E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.pdb
