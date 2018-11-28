@@ -286,6 +286,7 @@
             this.lbl_bearing.Size = new System.Drawing.Size(35, 13);
             this.lbl_bearing.TabIndex = 8;
             this.lbl_bearing.Text = "label7";
+            this.lbl_bearing.Visible = false;
             // 
             // lbl_repairperson
             // 

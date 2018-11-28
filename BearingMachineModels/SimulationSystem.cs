@@ -31,7 +31,7 @@ namespace BearingMachineModels
         public int RepairTimeForAllBearings { get; set; }
         public List<TimeDistribution> DelayTimeDistribution { get; set; }
         public List<TimeDistribution> BearingLifeDistribution { get; set; }
-        public CurrentSimulationCase Current_SimulationCase { get; set; }
+        public ProposedSimulationCase Proposed_SimulationCase { get; set; }
 
         ///////////// OUTPUTS /////////////
         public List<CurrentSimulationCase> CurrentSimulationTable { get; set; }
@@ -41,10 +41,13 @@ namespace BearingMachineModels
 
         public void start_simulation()
         {
-            Current_SimulationCase = new CurrentSimulationCase();
-            CurrentSimulationTable = Current_SimulationCase.calc_bearing(NumberOfBearings, NumberOfHours, DelayTimeDistribution, BearingLifeDistribution);
+            calc_bearing();
             CurrentPerformanceMeasures = new PerformanceMeasures();
             CurrentPerformanceMeasures.Current_PerformanceMeasures(CurrentSimulationTable, DowntimeCost, RepairPersonCost, BearingCost, RepairTimeForOneBearing);
+            Proposed_SimulationCase = new ProposedSimulationCase();
+            ProposedSimulationTable = Proposed_SimulationCase.fill_ProposedSimulationTable(NumberOfBearings, NumberOfHours, CurrentSimulationTable,DelayTimeDistribution,BearingLifeDistribution);
+            ProposedPerformanceMeasures = new PerformanceMeasures();
+            ProposedPerformanceMeasures.Proposed_PerformanceMeasures(ProposedSimulationTable, NumberOfBearings, DowntimeCost, RepairPersonCost, BearingCost, RepairTimeForAllBearings);
         }
 
         void generate_cumulative_range(List<TimeDistribution> dist)
@@ -158,6 +161,60 @@ namespace BearingMachineModels
             }
             SR.Close();
 
+        }
+
+        public void calc_bearing()
+        {
+            Random rand = new Random();
+            int index = 0;
+            int j;
+
+            for (int i = 1; i <= NumberOfBearings; i++)
+            {
+                j = 0;
+                while (true)
+                {
+                    CurrentSimulationCase Current_case = new CurrentSimulationCase();
+
+                    Current_case.Bearing.Index = i;
+                    int ran_hours = rand.Next(1, 101);
+                    Current_case.Bearing.RandomHours = ran_hours;
+                    for (int k = 0; k < BearingLifeDistribution.Count; k++)
+                    {
+                        if (ran_hours <= BearingLifeDistribution[k].MaxRange && ran_hours >= BearingLifeDistribution[k].MinRange)
+                        {
+                            Current_case.Bearing.Hours = BearingLifeDistribution[k].Time;
+                            break;
+                        }
+                    }
+                    if (j == 0)
+                        Current_case.AccumulatedHours = Current_case.Bearing.Hours;
+                    else
+                        Current_case.AccumulatedHours = Current_case.Bearing.Hours + CurrentSimulationTable[index - 1].AccumulatedHours;
+
+                    int ran_delay = rand.Next(1, 101);
+                    Current_case.RandomDelay = ran_delay;
+                    for (int k = 0; k < DelayTimeDistribution.Count; k++)
+                    {
+                        if (ran_delay <= DelayTimeDistribution[k].MaxRange && ran_delay >= DelayTimeDistribution[k].MinRange)
+                        {
+                            Current_case.Delay = DelayTimeDistribution[k].Time;
+                            break;
+                        }
+                    }
+
+                    CurrentSimulationTable.Add(Current_case);
+                    index++;
+                    if (Current_case.AccumulatedHours >= NumberOfHours)
+                        break;
+                    else
+                        j++;
+
+
+                }
+            }
+
+            
         }
         
     }
