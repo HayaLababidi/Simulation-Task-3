@@ -49,7 +49,6 @@ D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMac
 D:\Redirected Profile\Desktop\fcis\kolya\year 4\git\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.pdb
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\bin\Debug\BearingMachineModels.dll
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\bin\Debug\BearingMachineModels.pdb
-E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.dll
 E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.pdb
 E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineModels\bin\Debug\BearingMachineModels.dll
@@ -57,3 +56,4 @@ E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineMod
 E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache
 E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.dll
 E:\university\Fourth Year\Simulation\Project\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.pdb
+E:\year4_1\Simulation\Tasks\Task 3\Simulation-Task-3\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache

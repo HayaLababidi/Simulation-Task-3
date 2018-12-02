@@ -44,8 +44,7 @@ namespace BearingMachineModels
             calc_bearing();
             CurrentPerformanceMeasures = new PerformanceMeasures();
             CurrentPerformanceMeasures.Current_PerformanceMeasures(CurrentSimulationTable, DowntimeCost, RepairPersonCost, BearingCost, RepairTimeForOneBearing);
-            Proposed_SimulationCase = new ProposedSimulationCase();
-            ProposedSimulationTable = Proposed_SimulationCase.fill_ProposedSimulationTable(NumberOfBearings, NumberOfHours, CurrentSimulationTable,DelayTimeDistribution,BearingLifeDistribution);
+            fill_ProposedSimulationTable();
             ProposedPerformanceMeasures = new PerformanceMeasures();
             ProposedPerformanceMeasures.Proposed_PerformanceMeasures(ProposedSimulationTable, NumberOfBearings, DowntimeCost, RepairPersonCost, BearingCost, RepairTimeForAllBearings);
         }
@@ -56,24 +55,40 @@ namespace BearingMachineModels
 
             //fill Cumulative column
             dist[0].CummProbability = dist[0].Probability;
+            
             for (int i = 1; i < size; i++)
             {
                 dist[i].CummProbability = dist[i - 1].CummProbability + dist[i].Probability;
             }
+            
             //fill MinRange , MaxRange
             dist[0].MinRange = 1;
             dist[size - 1].MaxRange = 0;
-            for (int i = 0; i < size; i++)
-            {
-                dist[i].MaxRange = Convert.ToInt32(dist[i].CummProbability * 100);
-            }
-            //dist[0].range = Convert.ToString(dist[0].MinRange) + " - " + Convert.ToString(dist[0].MaxRange);
-            for (int i = 1; i < size; i++)
-            {
-                dist[i].MinRange = dist[i - 1].MaxRange + 1;
-                //dist[i].range = Convert.ToString(dist[i].MinRange) + " - " + Convert.ToString(dist[i].MaxRange);
 
+            if (dist[0].CummProbability == 1)
+            {
+                dist[0].MaxRange = Convert.ToInt32(dist[0].CummProbability * 100);
+                for (int i = 1; i < size; i++)
+                {
+                    dist[i].MaxRange = 0;
+                    dist[i].MinRange = 0;
+                }
             }
+            else
+            {
+                for (int i = 0; i < size; i++)
+                {
+                    dist[i].MaxRange = Convert.ToInt32(dist[i].CummProbability * 100);
+                }
+                //dist[0].range = Convert.ToString(dist[0].MinRange) + " - " + Convert.ToString(dist[0].MaxRange);
+                for (int i = 1; i < size; i++)
+                {
+                    dist[i].MinRange = dist[i - 1].MaxRange + 1;
+                    //dist[i].range = Convert.ToString(dist[i].MinRange) + " - " + Convert.ToString(dist[i].MaxRange);
+
+                }
+            }
+            
         }
 
         public void ReadInput(string filepath)
@@ -215,6 +230,86 @@ namespace BearingMachineModels
             }
 
             
+        }
+
+        public void fill_ProposedSimulationTable()
+        {
+            List<List<Bearing>> listOflifetimeBearings = new List<List<Bearing>>();
+            Dictionary<int, int> dic_bearings = new Dictionary<int, int>();
+            List<Bearing> currentBearings;
+            Random rand = new Random();
+            int index_currentStable;
+            int index_bearings;
+            index_currentStable = 0;
+            //to fill listOflifetimeBearings list
+            for (int i = 1; i <= this.NumberOfBearings; i++)
+            {
+                //num of changes in one bearing
+                index_bearings = 0;
+                listOflifetimeBearings.Add(new List<Bearing>());
+                while (this.CurrentSimulationTable[index_currentStable].Bearing.Index == i)
+                {
+                    listOflifetimeBearings[i - 1].Add(new Bearing());
+                    listOflifetimeBearings[i - 1][index_bearings] = CurrentSimulationTable[index_currentStable].Bearing;
+                    index_bearings++;
+                    if (index_currentStable != CurrentSimulationTable.Count - 1)
+                        index_currentStable++;
+                    else
+                        break;
+                }
+            }
+            // fill dictionary with index of the bearing as key & min value of changes in bearing as value  
+            for (int i = 1; i <= listOflifetimeBearings.Count; i++)
+            {
+                dic_bearings.Add(i, listOflifetimeBearings[i - 1].Count);
+            }
+            int count = dic_bearings.Values.Max();
+            int acc_hours = 0;
+
+            for (int i = 0; acc_hours < NumberOfHours; i++)
+            {
+                currentBearings = new List<Bearing>();
+                for (int j = 0; j < this.NumberOfBearings; j++)
+                {
+                    if (dic_bearings[j + 1] == 0)
+                    {
+                        int ran_hours = rand.Next(1, 101);
+                        System.Threading.Thread.Sleep(10);
+                        for (int k = 0; k < BearingLifeDistribution.Count; k++)
+                        {
+                            if (ran_hours <= BearingLifeDistribution[k].MaxRange && ran_hours >= BearingLifeDistribution[k].MinRange)
+                            {
+                                currentBearings.Add(new Bearing());
+                                currentBearings[j].Hours = BearingLifeDistribution[k].Time;
+                                currentBearings[j].RandomHours = ran_hours;
+                                currentBearings[j].Index = j + 1;
+                                break;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        currentBearings.Add(new Bearing());
+                        currentBearings[j] = listOflifetimeBearings[j][i];
+                        dic_bearings[j + 1]--;
+                        //listOflifetimeBearings[j].RemoveAt(i);
+                    }
+
+                }
+                if (i != 0)
+                {
+                    ProposedSimulationTable.Add(new ProposedSimulationCase());
+                    ProposedSimulationTable[i].fill_ProposedSimulationRow(currentBearings, ProposedSimulationTable[i - 1].AccumulatedHours, this.DelayTimeDistribution);
+                    acc_hours = ProposedSimulationTable[i].AccumulatedHours;
+                }
+                else
+                {
+                    ProposedSimulationTable.Add(new ProposedSimulationCase());
+                    ProposedSimulationTable[i].fill_ProposedSimulationRow(currentBearings, 0, this.DelayTimeDistribution);
+
+                }
+            }
         }
         
     }

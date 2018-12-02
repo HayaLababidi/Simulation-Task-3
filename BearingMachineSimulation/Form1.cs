@@ -46,7 +46,7 @@ namespace BearingMachineSimulation
                 test_message = Constants.FileNames.TestCase1;
             }
                 
-            else if (comboBox1.SelectedIndex == 0)
+            else if (comboBox1.SelectedIndex == 1)
             {
                 file_path = @"..\..\TestCases\" + Constants.FileNames.TestCase2;
                 test_message = Constants.FileNames.TestCase2;
@@ -117,13 +117,52 @@ namespace BearingMachineSimulation
                 Bearing_replace.Rows.Add(sys.CurrentSimulationTable[i].Bearing.Index, sys.CurrentSimulationTable[i].Bearing.RandomHours, sys.CurrentSimulationTable[i].Bearing.Hours, sys.CurrentSimulationTable[i].AccumulatedHours, sys.CurrentSimulationTable[i].RandomDelay, sys.CurrentSimulationTable[i].Delay);
 
             GrdView_currenttable.DataSource = Bearing_replace;
+            lbl_Cdelay.Text = sys.CurrentPerformanceMeasures.total_minutes.ToString();
 
             List<BearingMachineModels.PerformanceMeasures> PerformanceMeasuresList2 = new List<BearingMachineModels.PerformanceMeasures>();
             PerformanceMeasuresList2.Add(sys.ProposedPerformanceMeasures);
             GrdView_PPerformancemeasures.DataSource = PerformanceMeasuresList2;
-            GrdView_Prposedtable.DataSource = sys.ProposedSimulationTable;
+            
+            DataTable Bearing_porp = new DataTable();
+            DataColumn Pcol;
 
-            lbl_Cdelay.Text = sys.CurrentPerformanceMeasures.total_minutes.ToString();
+            int num_bearing = sys.NumberOfBearings;
+            for(int i=1; i<=num_bearing; i++)
+            {
+                Pcol = new DataColumn("Bearing" + i);
+                Bearing_porp.Columns.Add(Pcol);
+            }
+
+            Pcol = new DataColumn("FirstFailure");
+            Bearing_porp.Columns.Add(Pcol);
+
+            Pcol = new DataColumn("AccumulatedHours");
+            Bearing_porp.Columns.Add(Pcol);
+
+            Pcol = new DataColumn("RandomDelay");
+            Bearing_porp.Columns.Add(Pcol);
+
+            Pcol = new DataColumn("Delay");
+            Bearing_porp.Columns.Add(Pcol);
+
+            for (int i = 0; i < sys.ProposedSimulationTable.Count; i++)
+            {
+                Bearing_porp.Rows.Add();
+                for (int j = 0; j < num_bearing; j++)
+                    Bearing_porp.Rows[i][j] = sys.ProposedSimulationTable[i].Bearings[j].Hours;
+            }        
+
+            for (int i = 0; i < sys.ProposedSimulationTable.Count; i++)
+            {
+                Bearing_porp.Rows[i][num_bearing] = sys.ProposedSimulationTable[i].FirstFailure;
+                Bearing_porp.Rows[i][num_bearing+1] = sys.ProposedSimulationTable[i].AccumulatedHours;
+                Bearing_porp.Rows[i][num_bearing+2] = sys.ProposedSimulationTable[i].RandomDelay;
+                Bearing_porp.Rows[i][num_bearing+3] = sys.ProposedSimulationTable[i].Delay;
+            }
+
+            GrdView_Prposedtable.DataSource = Bearing_porp;
+
+            lbl_Pdelay.Text = sys.ProposedPerformanceMeasures.total_minutes.ToString();
 
             MessageBox.Show(TestingManager.Test(sys, test_message));
         }
